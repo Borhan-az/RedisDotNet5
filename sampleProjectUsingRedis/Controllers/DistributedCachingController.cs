@@ -41,7 +41,11 @@ namespace sampleProjectUsingRedis.Controllers
             await cache.SetStringAsync(key, value);
             return Ok(value);
         }
-
+        /// <summary>
+        /// Remove Keys
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public async Task<IActionResult> RemoveKey(string key)
         {
             logger.LogInformation("remove record from redis started");
